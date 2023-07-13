@@ -1,8 +1,17 @@
+"""
+Amazon Web Scraping Program
 
+This program automatically extracts selected information from specified web pages.
 
-# python3 '/Users/ilo/Desktop/PYTHON/Praktyczny_python_M05/Projekt 5.py' 'https://www.leroymerlin.pl/materialy-budowlane/materialy-budowlane-stan-surowy/piasek-keramzyt,a347.html' '//*[@id="product-listing"]//div[contains(@class, "catalog-card-container")]'
-# python3 '/Users/ilo/Desktop/PYTHON/Praktyczny_python_M05/Projekt 5.py' 'https://home.biedronka.pl/kuchnia/?utm_source=biedronkapl&utm_medium=www&utm_campaign=biedronka_home_menu&_ga=2.34961573.501035135.1689147025-1634869815.1689147023' '//*[@id="product-listing"]/div[contains(@class, "ProductList")]'
-#  python3 '/Users/ilo/Desktop/PYTHON/Praktyczny_python_M05/Projekt 5.py' 'https://homla.com.pl/salon.html' '//*[@id="maincontent"]/div/strong/a/text()'
+Usage:
+    python3 [filename][URL] [XPATH]
+
+Arguments:
+    URL (str): The URL of the web page to scrape.
+    XPATH (str): The XPath expression to locate elements containing the desired information.
+
+"""
+
 # python3 '/Users/ilo/Desktop/PYTHON/Praktyczny_python_M05/Projekt 5.py' 'https://www.leroymerlin.pl/okna-i-drzwi/parapety,a228.html' '//div[contains(@class, "ProductListProductBlock_wrapper__uqfrW")]'
 
 import click
