@@ -8,7 +8,7 @@ This program automatically extracts selected information from specified web page
 - [Technologies Used](#technologies-used)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Testing for Development](#testing-for-development)
+- [Testing](#testing)
 - [Solutions](#solutions)
 - [Future Plans](#future-plans)
 - [Inspirations and Acknowledgments](#inspirations-and-acknowledgments)
