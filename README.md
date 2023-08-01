@@ -65,4 +65,4 @@ The program extracts information from web pages by utilizing the specified XPath
 - Extend the program to scrape data from different types of websites.
 
 ## Inspirations and Acknowledgments
-This program was developed as part of a practical Python course. Thanks for the inspiring material and support!
+This program was developed as part of a 'Practical Python' course. Thanks for the inspiring material and support!
