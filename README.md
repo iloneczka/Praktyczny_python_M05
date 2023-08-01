@@ -1,21 +1,68 @@
-# Praktyczny_python_M05
+# Web Scraping Program
 
-Napisz dla Amazona program, który automatycznie wyciąga wybrane informacje z wybranych stron internetowych, na przykład nazwy produktów ze stron Leroy Merlin. Użytkownik podaje jedynie adres strony oraz ścieżkę xpath, którą może łatwo skopiować w przeglądarce.
+This program automatically extracts selected information from specified web pages.
 
-1. Użyj biblioteki click, aby łatwiej było Ci odczytać url oraz xpath.
+## Table of Contents
+- [General Info](#general-info)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Testing for Development](#testing-for-development)
+- [Solutions](#solutions)
+- [Future Plans](#future-plans)
+- [Inspirations and Acknowledgments](#inspirations-and-acknowledgments)
 
-2. Podziel kod na funkcje tak, aby można było go łatwo testować.
+## General Info
+This is an Amazon Web Scraping Program that automatically extracts selected information from specified web pages. It is built in Python and uses the lxml library for parsing HTML and the requests library for making HTTP requests to the web pages. The program takes a URL and an XPath expression as input and returns the extracted text based on the provided XPath.
 
-3. Napisz kilka testów. Zacznij od tzw. happy path, tzn. najprostszego przypadku, a następnie przetestuj przypadki brzegowe.
+## Features
+- Automatically extracts information from web pages using XPath expressions.
+- Customizable: You can specify the URL and XPath according to your requirements.
 
-4. Wyciągając z HTML tekst, usuń białe znaki z początku i końca (poszukaj odpowiedniej metody na stringach) oraz zamień znaki końca linii na spacje.
+## Technologies Used
+The program is written in Python.
 
-5. Wyświetl każdy znaleziony element HTML w osobnej linii.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-6. Użyj docstringów, aby udokumentować Twój kod. Jakie informacje Twoim zdaniem warto tam zawrzeć?
+## Prerequisites
+To run this project, make sure you have Python 3.11.2 installed on your computer.
 
-Hint: W razie problemów z cudzysłowami w XPATH pod Windows, możesz zamienić je na apostrofy, np.:
-    "//div[@id='wartosc']" 
-zamiast 
-    '//div[@id="wartosc"]'
+## Setup
+To run the project locally, follow these steps:
 
+- Clone this repository to your local machine.
+- Navigate to the project directory.
+- Run the program:
+```
+python3 web_scraping_program.py [URL] [XPath]
+```
+
+## Testing
+To ensure the correctness of the `web_scraping_program.py` module, I have created a test suite in `test_web_scraping_program.py` using pytest. 
+These tests cover various scenarios, including valid content with matching XPath expressions, invalid XPath expressions, no matches for XPath expressions, handling None content, nested elements, and whitespace cleanup.
+
+### Running Tests
+To run the tests, follow these steps:
+
+1. Install pytest if you haven't already, by:
+``` 
+pip3 install pytest
+```
+2. Navigate to the project directory.
+
+3. Run the tests:
+```
+pytest test_web_scraping_program.py
+```
+
+## Solutions
+The program extracts information from web pages by utilizing the specified XPath expressions. It uses the `lxml` library to parse the HTML content of the web page and the `requests` library to fetch the web page's content.
+
+## Future Plans
+- Implement additional features like saving the extracted data to a file or exporting it to a database.
+- Improve user interaction and make the program more user-friendly.
+- Extend the program to scrape data from different types of websites.
+
+## Inspirations and Acknowledgments
+This program was developed as part of a practical Python course. Thanks for the inspiring material and support!

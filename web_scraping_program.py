@@ -11,8 +11,7 @@ Arguments:
     XPATH (str): The XPath expression to locate elements containing the desired information.
 
 """
-
-# python3 '/Users/ilo/Desktop/PYTHON/Praktyczny_python_M05/Projekt 5.py' 'https://www.leroymerlin.pl/okna-i-drzwi/parapety,a228.html' '//div[contains(@class, "ProductListProductBlock_wrapper__uqfrW")]'
+# python3 '/Users/ilo/Desktop/PYTHON/Praktyczny_python_M05/web_scraping_program.py' 'https://www.leroymerlin.pl/okna-i-drzwi/parapety,a228.html' '//div[contains(@class, "ProductListProductBlock_wrapper__uqfrW")]'
 
 import click
 from lxml import html
@@ -29,6 +28,10 @@ def extract_text(content: str, xpath: str) -> list[str]:
     Returns:
         list[str]: The list of extracted texts.
     """
+
+    if content is None:
+        raise AttributeError("Content is None. Please provide valid content.")
+
     dom = html.fromstring(content)
     elements = dom.xpath(xpath)
     # print(f'ELEMENTS: {elements}')
